@@ -16,14 +16,10 @@ concreteStrengthPredictorFile.close()
 	
 # Render Concrete mixture input page
 @app.route('/input')
+@app.route('/')
 def input():
     return render_template('input.html')
 
-@app.route('/')
-@app.route('/index')
-def home():
-    return "Hi, Welcome to Flask!!"	
-	
 # This function will be called when the input page is submitted
 @app.route('/predict', methods=["POST"])
 def predict():
